@@ -1,9 +1,9 @@
 <style>
   :root {
     --penguin-size: 300px;
-    --penguin-skin: gray;
+    --penguin-skin: #070707;//gray
     --penguin-belly: white;
-    --penguin-beak: orange;
+    --penguin-beak: #F4B300;//orange
   }
 
   @media (max-width: 350px) {
@@ -96,7 +96,7 @@
         transform: rotate(110deg);
       }
       40% {
-        transform: rotate(130deg);
+        transform: rotate(540deg);//130deg
       }
     }
 
@@ -203,7 +203,37 @@
   .penguin * {
     position: absolute;
   }
+  #ball {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      95deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
 </style>
+<div id="ball"></div>
 <div class="penguin">
   <div class="penguin-bottom">
     <div class="right-hand"></div>
@@ -227,3 +257,4 @@
     <div class="beak-bottom"></div>
   </div>
 </div>
+<div id="rect" class="rainbow"></div>
