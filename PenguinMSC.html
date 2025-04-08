@@ -210,10 +210,10 @@
     position: relative;
     border-radius: 50%;
     background: linear-gradient(
-      95deg,
-      #ccffff,
-      #ffcccc
-    );
+    95deg,
+#F4B300,
+#070707
+    );/* 95deg,#ccffff, #ffcccc */
     animation-name: bounce;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -233,6 +233,22 @@
     }
   }
 </style>
+<script defer>const closeButton = document.getElementById('closeDialog');
+
+        openButton.addEventListener('click', () => {
+            dialog.showModal();
+        });
+
+        closeButton.addEventListener('click', () => {
+            dialog.close();
+        });</script>
+<head>
+<link rel="icon" href="linux.ico" type="image/x-icon">
+</head>
+<dialog>
+<p>HELLOWORLD</p>
+<button id="closeDialog">Close</button>
+</dialog>
 <div id="ball"></div>
 <div class="penguin">
   <div class="penguin-bottom">
